@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <!--Sean Stephen Rupert O. Yango-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+
+        <style>
+            body{
+                background:radial-gradient(palegoldenrod  , bisque , pink ) ;
+                width: 1500px;
+                height: 100ww;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            h1{
+                text-align: center;
+                color:darkgoldenrod;
+                animation: Top 5s linear infinite;
+                font-size: 60px;
+            }
+
+            .calculator{
+                background-color: peachpuff;
+                padding: 20px;
+                border-style: solid;
+                border-radius: 20px;
+                margin: 10% 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                line-height: 27px;
+            }
+
+            .NumberBox{
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+
+            .button{
+                background-color: antiquewhite;
+                height: 20px;
+                width: 100px;
+                border: 1px solid black;
+            }
+
+            .button:hover{
+                background-color: darksalmon;
+                transform: scale(105%);
+                border: 1px solid black;
+            }
+            
+            @keyframes Top {
+                0%{transform:translateY(15%);}
+                25%{transform:translateY(-15%);}
+                50%{transform:translateY(15%);}
+                75%{transform:translateY(-15%);}
+                100%{transform:translateY(15%);}
+                
+            }
+
+        </style>
+        <script type="text/javascript">
+            function add(){
+                var FNum = document.getElementById("FirstNum").value;
+                var SNum = document.getElementById("SecondNum").value;
+                var Sum = parseFloat(FNum) + parseFloat(SNum);
+                
+                alert(parseFloat(FNum) + " + " + parseFloat(SNum) + " = " + Sum)
+            }
+        
+            function subtract(){
+                var FNum = document.getElementById("FirstNum").value;
+                var SNum = document.getElementById("SecondNum").value;
+                var Difference = parseFloat(FNum) - parseFloat(SNum);
+
+                alert(parseFloat(FNum) + " - " + parseFloat(SNum) + " = " + Difference)
+            }
+
+            function multiply(){
+                var FNum = document.getElementById("FirstNum").value;
+                var SNum = document.getElementById("SecondNum").value;
+                var Product = parseFloat(FNum) * parseFloat(SNum);
+
+                alert(parseFloat(FNum) + " x " + parseFloat(SNum) + " = " + Product)
+            }
+
+            function divide(){
+                var FNum = document.getElementById("FirstNum").value;
+                var SNum = document.getElementById("SecondNum").value;
+                var Quotient = parseFloat(FNum) / parseFloat(SNum);
+
+                alert(parseFloat(FNum) + " / " + parseFloat(SNum) + " = " + Quotient)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Basic Calculator</h1>
+        <div class="calculator">
+            <form>
+                First Number:
+                <br>
+                <input type="number" name="first number" placeholder="Enter First Number" id="FirstNum" class="NumberBox">
+                <br>    
+                Second Number:
+                <br>
+                <input type="number" name="second number" placeholder="Enter Second Number" id="SecondNum" class="NumberBox">
+                <br>
+                <button onclick="add()"  class="button" >ADD</button>
+                <button onclick="subtract()"  class="button">SUBTRACT</button> 
+                <br>
+                <button onclick="multiply()"  class="button">MULTIPLY</button> 
+                <button onclick="divide()"  class="button">DIVIDE</button> 
+            </form>
+
+
+        </div>
+        
+    </body>
+</html>
